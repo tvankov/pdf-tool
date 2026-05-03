@@ -25,22 +25,9 @@ A lightweight desktop application for working with PDF files — built with Pyth
 
 <img width="923" height="773" alt="grafik" src="https://github.com/user-attachments/assets/77289f04-6a38-43e9-a5ed-4ae2d1fad43f" />
 
-```
+<img width="926" height="775" alt="grafik" src="https://github.com/user-attachments/assets/6da2758c-08a7-4473-bad7-71448aa89b9d" />
 
-┌─────────────────────────────────────────┐
-│  ⬡ PDF Tool                Todor Vankov │
-├──────────────┬──────────────┬───────────┤
-│ ➕ Merge     │ ✂ Split      │ ℹ Info    │
-├─────────────────────────────────────────┤
-│                                         │
-│   ⬇  Drop PDF files here               │
-│                                         │
-├─────────────────────────────────────────┤
-│ + Add  ↑ Up  ↓ Down  ✕ Remove  🗑 Clear │
-│ Output: Desktop/merged.pdf         [📁] │
-│ [🔗 Merge PDFs]  ✓ Saved: merged.pdf   │
-└─────────────────────────────────────────┘
-```
+<img width="924" height="773" alt="grafik" src="https://github.com/user-attachments/assets/6ca4cb44-f3f7-4217-81b8-ab4844d277ce" />
 
 ---
 
