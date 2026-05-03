@@ -24,6 +24,8 @@ A lightweight desktop application for working with PDF files — built with Pyth
 > Dark-themed desktop UI with tab-based navigation and drag & drop support.
 
 ```
+<img width="923" height="773" alt="grafik" src="https://github.com/user-attachments/assets/285d860e-6f73-4442-9cfc-a2739f39d856" />
+
 ┌─────────────────────────────────────────┐
 │  ⬡ PDF Tool                Todor Vankov │
 ├──────────────┬──────────────┬───────────┤
