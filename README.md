@@ -2,39 +2,58 @@
 
 A lightweight desktop application for working with PDF files — built with Python, Tkinter and pypdf.
 
-![Python](https://img.shields.io/badge/Python-3.8+-blue?style=flat-square&logo=python)
-![pypdf](https://img.shields.io/badge/pypdf-4.x-green?style=flat-square)
+![Python](https://img.shields.io/badge/Python-3.10+-blue?style=flat-square&logo=python)
+![pypdf](https://img.shields.io/badge/pypdf-6.x-green?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)
 
 ---
 
-## Features
+## Features — 21 Tools
 
-| Tab | Description |
+| Tool | Description |
 |---|---|
 | ➕ **Merge PDFs** | Combine multiple PDFs into one — drag & drop supported |
-| ✂ **Split PDF** | Extract individual pages or a specific page range |
-| ℹ **PDF Info** | Display metadata, page count and encryption status |
+| ✂ **Split PDF** | Extract individual pages or a page range |
+| 📄 **Extract Text** | Export text to TXT, DOCX or clipboard |
+| 🖼 **Extract Images** | Save embedded images as PNG, JPG, TIFF or WebP |
+| 🗜 **Compress** | Reduce file size by downsampling embedded images |
+| 🔄 **Rotate** | Rotate pages 90°, 180° or 270° — all or specific pages |
+| 💧 **Watermark** | Stamp text or image watermarks on any page |
+| 🔒 **Password** | Add or remove PDF encryption |
+| 🔀 **Reorder** | Drag pages into any order before saving |
+| 🏷 **Metadata** | View and edit Title, Author, Subject, Keywords |
+| 🗑 **Remove Blanks** | Detect and delete near-empty pages |
+| 🔧 **Repair PDF** | Rebuild corrupted PDFs page by page |
+| 🖼→📄 **Images to PDF** | Convert image files into a PDF document |
+| ✂📐 **Crop Margins** | Trim page margins in mm (top / bottom / left / right) |
+| 🔍 **OCR** | Extract text from scanned pages via Tesseract |
+| ⚖ **Compare PDFs** | Side-by-side text diff with color-coded changes |
+| ⬛ **Redact PDF** | Black out sensitive regions defined in mm |
+| 🔢 **Page Numbers** | Add styled page numbers — position, format, color |
+| ✍ **Signature** | Place a signature image on selected pages |
+| 📄⊞ **N-Up** | Impose multiple pages per sheet (2-up, 4-up, 6-up, 9-up) |
+| 🔖 **Bookmarks** | View, add, delete bookmarks — split PDF by chapter |
 
 ---
 
-## Preview
+## Screenshot
 
-> Dark-themed desktop UI with tab-based navigation and drag & drop support.
+> Dark-themed card navigation — click any tool to open it instantly.
 
-<table>
-  <tr>
-    <td><img src="https://github.com/user-attachments/assets/77289f04-6a38-43e9-a5ed-4ae2d1fad43f" width="280"/></td>
-    <td><img src="https://github.com/user-attachments/assets/6da2758c-08a7-4473-bad7-71448aa89b9d" width="280"/></td>
-    <td><img src="https://github.com/user-attachments/assets/6ca4cb44-f3f7-4217-81b8-ab4844d277ce" width="280"/></td>
-  </tr>
-  <tr>
-    <td align="center"><b>Merge PDFs</b></td>
-    <td align="center"><b>Split PDF</b></td>
-    <td align="center"><b>PDF Info</b></td>
-  </tr>
-</table>
+```
+┌──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┐
+│  ➕      │  ✂       │  📄      │  🖼       │  🗜      │  🔄      │  💧      │
+│  Merge   │  Split   │ Extract  │ Extract  │ Compress │  Rotate  │Watermark │
+├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+│  🔒      │  🔀      │  🏷       │  🗑      │  🔧      │ 🖼→📄    │  ✂📐     │
+│ Password │ Reorder  │ Metadata │  Remove  │  Repair  │  Images  │  Crop    │
+├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+│  🔍      │  ⚖       │  ⬛      │  🔢      │  ✍       │  📄⊞     │  🔖      │
+│   OCR    │ Compare  │  Redact  │  Page No │Signature │   N-Up   │Bookmarks │
+└──────────┴──────────┴──────────┴──────────┴──────────┴──────────┴──────────┘
+```
+
 ---
 
 ## Installation
@@ -45,23 +64,23 @@ git clone https://github.com/tvankov/pdf-tool.git
 cd pdf-tool
 ```
 
-**2. Create a virtual environment**
-```bash
-python -m venv venv
-venv\Scripts\activate        # Windows
-source venv/bin/activate     # macOS / Linux
-```
-
-**3. Install dependencies**
+**2. Install dependencies**
 ```bash
 pip install -r requirements.txt
-pip install tkinterdnd2      # optional — enables drag & drop
 ```
 
-**4. Run the app**
+**3. Run the app**
 ```bash
 python main.py
 ```
+
+### Optional — Drag & Drop support
+```bash
+pip install tkinterdnd2
+```
+
+### Optional — OCR support
+Install [Tesseract OCR](https://github.com/UB-Mannheim/tesseract/wiki). The app detects it automatically on Windows (`C:\Program Files\Tesseract-OCR\`).
 
 ---
 
@@ -75,40 +94,45 @@ No Python installation required.
 
 ---
 
-## Project Structure
+## Requirements
 
 ```
-pdf_tool/
-├── main.py          ← Entry point — launches the app
-├── config.py        ← Color theme and shared constants
-├── requirements.txt
-├── .gitignore
-└── tabs/
-    ├── __init__.py  ← Imports all tab classes
-    ├── merge.py     ← Merge PDFs tab
-    ├── split.py     ← Split PDF tab
-    └── info.py      ← PDF Info tab
-```
-
-### Adding a new tab
-
-1. Create `tabs/your_feature.py` with a class `YourFeatureTab`
-2. Register it in `tabs/__init__.py`
-3. Add one line in `main.py` inside `_build_tabs()`:
-
-```python
-YourFeatureTab(nb)
+pypdf
+reportlab
+Pillow
+python-docx
+pdf2image
+pytesseract
+tkinterdnd2   # optional
 ```
 
 ---
 
-## Roadmap
+## Project Structure
 
-- [ ] 🔒 Encrypt / Decrypt PDF
-- [ ] 🔄 Rotate pages
-- [ ] 🖼 Extract images from PDF
-- [ ] 💧 Add watermark
-- [ ] 📝 Fill PDF forms
+```
+pdf_tool/
+├── main.py           ← Entry point — card-based navigation
+├── config.py         ← Color theme constants
+├── requirements.txt
+├── .gitignore
+└── tabs/
+    ├── __init__.py
+    ├── merge.py          split.py          extract_text.py
+    ├── extract_images.py compress.py       rotate.py
+    ├── watermark.py      password.py       reorder.py
+    ├── metadata.py       blank.py          repair.py
+    ├── convert.py        crop.py           ocr.py
+    ├── compare.py        redact.py         pagenumbers.py
+    ├── signature.py      nup.py            bookmarks.py
+```
+
+### Adding a new tool
+
+1. Create `tabs/your_feature.py` with a class `YourFeatureTab`
+   — set `LABEL = "🔣  Tool Name"` (emoji + two spaces + name)
+2. Register it in `tabs/__init__.py`
+3. Add `YourFeatureTab` to `TAB_CLASSES` in `main.py`
 
 ---
 
