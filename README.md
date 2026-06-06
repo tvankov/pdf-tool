@@ -8,6 +8,8 @@ A lightweight desktop application for working with PDF files — built with Pyth
 ![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)
 
 ---
+<img width="1067" height="1022" alt="grafik" src="https://github.com/user-attachments/assets/6343a8a6-4607-4b1f-9825-249c2971be3f" />
+---
 
 ## Features — 21 Tools
 
