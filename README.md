@@ -45,13 +45,13 @@ A lightweight desktop application for working with PDF files — built with Pyth
 
 ```
 ┌──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┐
-│  ➕      │  ✂       │  📄      │  🖼       │  🗜      │  🔄      │  💧      │
+│  ➕      │  ✂      │  📄     │  🖼      │    🗜     │  🔄     │  💧      │
 │  Merge   │  Split   │ Extract  │ Extract  │ Compress │  Rotate  │Watermark │
 ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-│  🔒      │  🔀      │  🏷       │  🗑      │  🔧      │ 🖼→📄    │  ✂📐     │
+│  🔒      │  🔀     │  🏷      │  🗑       │   🔧    │  🖼→📄   │  ✂📐    │
 │ Password │ Reorder  │ Metadata │  Remove  │  Repair  │  Images  │  Crop    │
 ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-│  🔍      │  ⚖       │  ⬛      │  🔢      │  ✍       │  📄⊞     │  🔖      │
+│  🔍      │  ⚖      │  ⬛     │  🔢      │    ✍    │  📄⊞    │  🔖      │
 │   OCR    │ Compare  │  Redact  │  Page No │Signature │   N-Up   │Bookmarks │
 └──────────┴──────────┴──────────┴──────────┴──────────┴──────────┴──────────┘
 ```
